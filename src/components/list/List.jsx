@@ -18,7 +18,7 @@ export default function List({ array }) {
   }
 
   function update() {
-    localStorage.setItem("list", JSON.stringify(tmp));
+    localStorage.setItem("list", JSON.stringify(contextList));
     setContextList([...contextList]);
   }
 
