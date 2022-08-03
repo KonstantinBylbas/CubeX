@@ -1,0 +1,37 @@
+@import '../../index.scss';
+
+.list{
+  list-style: none;
+
+  li{
+    width: 100%;
+    padding: 6px 5px;
+    position: relative;
+    transition: 0.3s;
+
+    &.hidden{
+      display: none;
+    }
+
+    &:not(.row):hover{
+      background-color: rgba($color: $secondary, $alpha: 0.2);
+
+      .row{
+        width: max-content;
+      }
+    }
+
+    input{
+      margin: 0 -2px 0 -10px;
+    }
+
+    .row{
+      width: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+  }
+}
